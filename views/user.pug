@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= users.title
+  h5 Written by #{users.author}
+  p= users.body
+  hr
+  a.btn.btn-default(href='/users/edit/'+users._id) Editar
+  a.btn.btn-danger.delete-article(href='#', data-id=users._id) Eliminar

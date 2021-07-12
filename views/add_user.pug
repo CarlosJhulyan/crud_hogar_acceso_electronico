@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  if user
+    h1 #{title}
+    form(method='POST', action='/users/add')
+      .form-group
+        label Nombre de Usuario:
+        input.form-control(name='username', type='text')
+      .form-group
+        label Correo:
+        input.form-control(name='email', type='email')
+      .form-group
+        label Contraseña:
+        input.form-control(name='password', type='password')
+      .form-group
+        label PIN:
+        input.form-control(name='pin', type='password')
+      br
+      input.btn.btn-primary(type='submit', value='Registrar')
+  else
+    h2 Ingresa como administrador... 🔐

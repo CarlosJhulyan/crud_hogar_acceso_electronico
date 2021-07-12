@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  if user
+    h1 #{title}
+    form(method='POST', action='/users/edit/'+users._id)
+      .form-group
+        label Nombre de Usuario:
+        input.form-control(name='username', type='text', value=users.username)
+      .form-group
+        label Correo:
+        input.form-control(name='email', type='email', value=users.email)
+      .form-group
+        label Contraseña:
+        input.form-control(name='password', type='password', value=users.password)
+      .form-group
+        label PIN:
+        input.form-control(name='pin', type='password', value=users.pin)
+      br
+      input.btn.btn-primary(type='submit', value='Actualizar')
+  else
+    h2 Ingresa como administrador... 🔐

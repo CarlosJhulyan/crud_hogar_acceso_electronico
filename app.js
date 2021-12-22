@@ -3,7 +3,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
-const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const config = require('./config/database');
@@ -11,7 +10,7 @@ const config = require('./config/database');
 // Article model
 const Users = require('./models/users');
 
-mongoose.connect(config.database);
+mongoose.connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 // Check connection
@@ -21,7 +20,7 @@ db.once('open', function(){
 
 // Check for db errors
 db.on('error', function(err){
-  console.error(err);
+  console.error("error: ", err);
 });
 
 const app = express();

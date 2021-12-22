@@ -1,7 +1,7 @@
 {
-  "name": "crud_hogar_acceso_seguro",
+  "name": "DomoticHouse",
   "version": "1.0.0",
-  "description": "Un CRUD sencillo para una aplicacion de acceso a un hogar seguro",
+  "description": "Un CRUD sencillo para una aplicacion de DOMOTIC HOUSE",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app"

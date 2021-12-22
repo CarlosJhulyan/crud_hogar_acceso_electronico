@@ -1,3 +1,8 @@
+body {
+  background: #42506B;
+  color: #ccc;
+}
+
 .alert-error {
   color: #a94442;
   background: #f2dede;
@@ -11,6 +16,9 @@
 }
 
 .navbar {
-  background: #a94442;
-  color: white;
+  background: #EF4B4C;
+}
+
+.navbar-brand, .navbar a {
+  color: #E9E9EB !important;
 }
